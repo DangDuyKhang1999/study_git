@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class HocSinh {
+private:
+    string ten;
+    int tuoi;
+    float diem;
+
+public:
+    // Constructor
+    HocSinh(string t, int tuoi, float d) {
+        ten = t;
+        this->tuoi = tuoi;
+        diem = d;
+    }
+
+    // Nhập thông tin
+    void nhap() {
+        cout << "Nhap ten: ";
+        getline(cin, ten);
+
+        cout << "Nhap tuoi: ";
+        cin >> tuoi;
+
+        cout << "Nhap diem: ";
+        cin >> diem;
+        cin.ignore(); // tránh lỗi getline sau cin
+    }
+
+    // Xuất thông tin
+    void xuat() {
+        cout << "Ten: " << ten << endl;
+        cout << "Tuoi: " << tuoi << endl;
+        cout << "Diem: " << diem << endl;
+    }
+
+    // Getter ví dụ
+    float getDiem() {
+        return diem;
+    }
+};
+
+int main() {
+    HocSinh hs("", 0, 0);
+
+    hs.nhap();
+    cout << "\nThong tin hoc sinh:\n";
+    hs.xuat();
+
+    return 0;
+}
