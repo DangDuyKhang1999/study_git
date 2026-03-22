@@ -42,12 +42,3 @@ public:
     }
 };
 
-int main() {
-    HocSinh hs("", 0, 0);
-
-    hs.nhap();
-    cout << "\nThong tin hoc sinh:\n";
-    hs.xuat();
-
-    return 0;
-}
